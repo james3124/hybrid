@@ -13,4 +13,6 @@ bash scripts/perf-footnote-lint.sh
 bash scripts/wc-budget.sh
 bash scripts/sepolicy-pin-check.sh
 bash scripts/shell-lint.sh
+python3 scripts/req-coverage.py
+python3 scripts/dtbo-lint.py
 echo "jobs-mr: PASS"

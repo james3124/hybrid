@@ -20,4 +20,5 @@ bash scripts/malware-scan.sh
 bash security/app-scan.sh
 python3 scripts/req-coverage.py
 python3 scripts/dtbo-lint.py
+bash scripts/nano-budget-check.sh
 echo "jobs-mr: PASS"

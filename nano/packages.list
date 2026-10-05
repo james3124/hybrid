@@ -1,0 +1,15 @@
+# nano/packages.list — every package must justify its bytes (ch.05 minimalism)
+bash
+busybox-static
+chrony
+coreutils
+dbus
+grep
+iptables
+modemmanager
+nano
+network-manager
+sed
+systemd
+systemd-sysv
+util-linux

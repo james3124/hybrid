@@ -1,0 +1,12 @@
+# nano kernel fragment — strip what a 500MB console device never uses.
+# Parent: kernel/halide-base.fragment (inherited first).
+CONFIG_DRM=n
+CONFIG_GPU_VIRTUALIZATION=n
+CONFIG_SND=n
+CONFIG_MEDIA_SUPPORT=n
+CONFIG_USB_HOST_DRIVERS=y
+CONFIG_USB_STORAGE=y
+CONFIG_INET=y
+CONFIG_IPV6=y
+CONFIG_DEBUG_INFO=n
+CONFIG_KASAN=n

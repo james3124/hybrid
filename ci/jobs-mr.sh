@@ -15,6 +15,9 @@ bash scripts/sepolicy-pin-check.sh
 bash scripts/shell-lint.sh
 bash security/hardening-audit.sh
 bash tests/reroute-contract.sh
+bash tests/ddos-contract.sh
+bash scripts/malware-scan.sh
+bash security/app-scan.sh
 python3 scripts/req-coverage.py
 python3 scripts/dtbo-lint.py
 echo "jobs-mr: PASS"

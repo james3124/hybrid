@@ -1,0 +1,4 @@
+# OTA cache whitelist — dirs allowed to differ after upgrade (ch.05 S140)
+/var/cache/halide
+/var/tmp
+~/.cache/halide

@@ -1,0 +1,5 @@
+# dump-diff golden ignore patterns (ch.10 S4)
+uptime
+signal.*dBm
+battery_pct.*
+timestamp

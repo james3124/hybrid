@@ -48,5 +48,24 @@ else
   echo "note: no live netd socket (device/builder only) — static contract only"
 fi
 
+# 5. reroute modes: default vpn, tor forces DNS-via-proxy, bad modes rejected
+if python3 - <<'PY'
+import sys
+sys.path.insert(0, "bridges")
+import netd_bridge
+r = "|".join([
+    netd_bridge.handle("MODE tor\n").strip(),
+    netd_bridge.handle("DNS 8.8.8.8\n").strip(),      # public resolver = leak under tor
+    netd_bridge.handle("DNS 10.152.152.10\n").strip(), # tor DNSPort = allowed
+    netd_bridge.handle("MODE onion\n").strip(),
+    netd_bridge.handle("MODE vpn\n").strip(),
+    netd_bridge.handle("DNS 8.8.8.8\n").strip(),
+])
+assert r == "OK mode:tor|ERR dns-via-tor-only|OK dns:10.152.152.10|ERR bad-mode|OK mode:vpn|OK dns:8.8.8.8", r
+PY
+then echo "netd: tor reroute mode enforces DNS-via-proxy — OK"
+else echo "FAIL: tor mode contract broken"; FAIL=1; fi
+[ "$FAIL" = 0 ] && echo "netd-contract(+tor): PASS" || exit 1
+
 [ "$FAIL" -eq 0 ] && echo "netd-contract: PASS"
 exit "$FAIL"

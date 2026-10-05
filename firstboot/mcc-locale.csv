@@ -1,0 +1,13 @@
+mcc,locale,timezone,currency
+310,en-US,America/New_York,USD
+311,en-US,America/Chicago,USD
+312,en-US,America/Denver,USD
+313,en-US,America/Los_Angeles,USD
+302,de-DE,Europe/Berlin,EUR
+208,fr-FR,Europe/Paris,EUR
+222,it-IT,Europe/Rome,EUR
+214,es-ES,Europe/Madrid,EUR
+234,en-GB,Europe/London,GBP
+440,ja-JP,Asia/Tokyo,JPY
+460,zh-CN,Asia/Shanghai,CNY
+230,ko-KR,Asia/Seoul,KRW

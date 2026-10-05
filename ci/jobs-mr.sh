@@ -7,4 +7,10 @@ python3 tests/test_bridges.py
 sh scripts/budget-check.sh
 sh scripts/socket-audit.sh
 sh tests/power-smoke.sh
+bash scripts/plan-consistency.sh
+bash scripts/md-links.sh
+bash scripts/perf-footnote-lint.sh
+bash scripts/wc-budget.sh
+bash scripts/sepolicy-pin-check.sh
+bash scripts/shell-lint.sh
 echo "jobs-mr: PASS"

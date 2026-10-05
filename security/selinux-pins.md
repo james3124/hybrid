@@ -22,3 +22,12 @@ neverallow * kernel:process { setcurrent transition };  # no domain auto-transit
 Expected: `sesearch --allow` matches the CSV rows only; neverallow compile passes; CI allowlist grep green.
 
 Fail action: any unlabeled allow found at release = block release, open BUG with domain + target class.
+
+## Pinned policy inputs (per release)
+
+| input | pin | recorded |
+|-------|-----|----------|
+| selinux (AOSP tag) | android-14.0.0_rXX | per-medit sha in SBOM at release |
+| device fragment | device/halide/sepolicy/neverallow.halide | git sha in MANIFEST.lock |
+
+An input without a commit SHA fails `scripts/sepolicy-pin-check.sh`.

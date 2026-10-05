@@ -1,0 +1,4 @@
+id,class,mac,tpm_ek_pub,image_sha,owner,date,health
+r01,builder,,TODO-enroll,TODO-sha256,@release,2026-10-05,green
+r02,virt-ci,,TODO-enroll,TODO-sha256,@qa,2026-10-05,green
+r03,lab-runner,,TODO-enroll,TODO-sha256,@qa,2026-10-05,green
